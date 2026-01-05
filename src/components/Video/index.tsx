@@ -22,7 +22,7 @@ export default function Video() {
         <div className="relative overflow-hidden">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="mx-auto max-w-[770px] overflow-hidden rounded-md">
+              <div className="mx-auto max-w-192.5 overflow-hidden rounded-md">
                 <div className="relative aspect-77/40 items-center justify-center">
                   <Image
                     src="/images/video/image.png"
@@ -34,7 +34,7 @@ export default function Video() {
                     <button
                       aria-label="video play button"
                       onClick={() => setOpen(true)}
-                      className="text-primary flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white/75 transition hover:bg-white cursor-pointer"
+                      className="text-primary flex h-17.5 w-17.5 cursor-pointer items-center justify-center rounded-full bg-white/75 transition hover:bg-white"
                     >
                       <svg
                         width="16"
@@ -66,4 +66,4 @@ export default function Video() {
       />
     </>
   );
-};
+}
