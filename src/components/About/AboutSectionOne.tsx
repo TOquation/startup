@@ -4,7 +4,7 @@ import { IconClouds } from "./icon-cloud";
 
 /* ------------------ EDITABLE CONTENT ------------------ */
 const aboutData = {
-  title: "Hi, I'm Tochi - Full Stack Developer & Problem Solver",
+  title: "Hi, I'm Tochi - FrontEnd Engineer / Developer & Problem Solver",
   paragraph:
     "I'm a passionate developer who transforms ideas into elegant, scalable digital solutions. With a focus on modern web technologies and user-centric design, I help businesses and startups bring their visions to life through clean code and thoughtful architecture.",
 
