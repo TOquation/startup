@@ -102,7 +102,7 @@ const Hero = () => {
                   variants={buttonVariants}
                   whileHover={!reduceMotion ? "hover" : undefined}
                   whileTap={!reduceMotion ? "tap" : undefined}
-                  className="block w-[70%] rounded-sm bg-black px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:bg-black/90 dark:bg-white/10 dark:hover:bg-white/5"
+                  className="bg-primary block w-full rounded-sm px-6 py-4 text-sm font-semibold text-white shadow-lg transition hover:bg-black/90 md:w-[70%] lg:px-8 lg:text-base dark:hover:bg-white/5"
                 >
                   Let's Work Together
                 </motion.a>
