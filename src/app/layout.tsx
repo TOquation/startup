@@ -15,10 +15,12 @@ export default function RootLayout({
         className={`bg-[#FCFCFC] dark:bg-black ${inter.variable} ${great_vibes.variable} ${nunito.className} ${caveat.variable}`}
       >
         <Providers>
-          <div className="">
+          <div className="relative z-9999 flex max-h-[calc(100vh-1rem)] w-full flex-col overflow-hidden">
             <Header />
-            {children}
-            <Footer />
+            <div className="flex-1 overflow-y-auto">
+              {children}
+              <Footer />
+            </div>
           </div>
           <ScrollToTop />
         </Providers>

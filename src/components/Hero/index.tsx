@@ -62,7 +62,7 @@ const Hero = () => {
       className="dark:bg-gray-dark relative z-10 overflow-hidden bg-white pt-30 pb-16 md:pt-37.5 md:pb-30 xl:pt-45 xl:pb-40 2xl:pt-52.5 2xl:pb-50"
     >
       <div className="container">
-        <div className="-mx-4 flex flex-wrap">
+        <div className="flex flex-wrap lg:-mx-4">
           <div className="w-full px-4">
             <div className="mx-auto max-w-200 text-center">
               <motion.h1

@@ -160,7 +160,7 @@ const Contact = () => {
                         disabled={!isFormValid}
                         whileHover={!reduceMotion ? { scale: 1.02 } : undefined}
                         whileTap={!reduceMotion ? { scale: 0.98 } : undefined}
-                        className={`bg-primary shadow-submit dark:shadow-submit-dark rounded-sm px-9 py-4 text-base font-medium text-white transition-all duration-300 ${
+                        className={`bg-primary shadow-submit dark:shadow-submit-dark w-full rounded-sm px-9 py-4 text-base font-medium text-white transition-all duration-300 lg:w-fit ${
                           !isFormValid ? "cursor-not-allowed opacity-50" : ""
                         }`}
                       >

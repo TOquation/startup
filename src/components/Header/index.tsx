@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   motion,
   AnimatePresence,
@@ -65,16 +65,32 @@ const Header = () => {
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
-  const handleStickyNavbar = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
+
   useEffect(() => {
-    window.addEventListener("scroll", handleStickyNavbar);
-    return () => window.removeEventListener("scroll", handleStickyNavbar);
+    // Find the scrollable container
+    const scrollContainer = document.querySelector(".overflow-y-auto");
+
+    const handleStickyNavbar = () => {
+      if (scrollContainer) {
+        if (scrollContainer.scrollTop >= 80) {
+          setSticky(true);
+        } else {
+          setSticky(false);
+        }
+      }
+    };
+
+    // Check on mount
+    handleStickyNavbar();
+
+    // Add scroll listener to the container
+    if (scrollContainer) {
+      scrollContainer.addEventListener("scroll", handleStickyNavbar);
+
+      return () => {
+        scrollContainer.removeEventListener("scroll", handleStickyNavbar);
+      };
+    }
   }, []);
 
   // Prevent body scroll when menu is open
@@ -94,9 +110,9 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header fixed top-0 left-0 z-99997 flex w-full items-center ${
+        className={`header fixed top-0 left-0 z-40 flex w-full items-center ${
           sticky
-            ? "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky bg-white/80 backdrop-blur-xs transition"
+            ? "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky bg-white/80 backdrop-blur-sm transition"
             : "bg-transparent"
         }`}
       >
@@ -183,7 +199,7 @@ const Header = () => {
               animate="visible"
               exit="hidden"
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 z-99998 bg-black/60 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-[9998] bg-black/60 backdrop-blur-sm lg:hidden"
               onClick={navbarToggleHandler}
             />
 
@@ -193,7 +209,7 @@ const Header = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="dark:bg-dark fixed top-0 right-0 z-99999 h-full w-full overflow-y-auto bg-white shadow-2xl lg:hidden"
+              className="dark:bg-dark fixed top-0 right-0 z-[9999] h-full w-full overflow-y-auto bg-white shadow-2xl lg:hidden"
             >
               {/* Drawer Header */}
               <div className="border-body-color/10 dark:border-body-color/20 flex items-center justify-between border-b px-6 py-6">

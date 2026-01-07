@@ -38,7 +38,7 @@ export default function HomePageClient() {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed inset-0 z-[999999] flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black"
+            className="fixed inset-0 z-999999 flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black"
           >
             {/* Glassmorphism overlay */}
             <div className="absolute inset-0 bg-black/80 backdrop-blur-3xl" />

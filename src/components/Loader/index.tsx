@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const Loader = () => {
@@ -63,6 +62,24 @@ const StyledWrapper = styled.div`
     width: 228px;
     height: 260px;
   }
+
+  /* Mobile responsive - reduce size */
+  @media (max-width: 768px) {
+    .macbook {
+      transform: scale(0.6);
+      width: 228px;
+      height: 260px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .macbook {
+      transform: scale(0.5);
+      width: 228px;
+      height: 260px;
+    }
+  }
+
   .macbook__topBord {
     position: absolute;
     z-index: 0;
