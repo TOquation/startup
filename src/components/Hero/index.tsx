@@ -69,25 +69,25 @@ const Hero = () => {
                 variants={itemVariants}
                 className="mb-6 text-3xl leading-tight font-extrabold text-black sm:text-4xl md:text-5xl dark:text-white"
               >
-                Building Digital Experiences <br className="hidden sm:block" />
-                That Feel Effortless & Powerful
+                Engineering Apps & Websites <br className="hidden sm:block" />
+                With Mathematical Precision
               </motion.h1>
 
               <motion.p
                 variants={itemVariants}
                 className="text-body-color dark:text-body-color-dark mb-12 text-base leading-relaxed sm:text-lg md:text-xl"
               >
-                I'm a creative frontend developer focused on crafting clean,
-                scalable, and engaging web applications. I blend thoughtful
-                design with modern technologies to build experiences that are
-                fast, intuitive, and future-ready.
+                I’m a frontend developer focused on designing and engineering
+                clean, scalable web applications. I blend thoughtful design,
+                modern technologies, and analytical thinking to create fast,
+                intuitive, and future-ready digital experiences.
               </motion.p>
 
               <motion.div
                 variants={itemVariants}
-                className="flex flex-col items-center justify-center gap-4 sm:flex-row"
+                className="flex items-center justify-center"
               >
-                <motion.a
+                {/* <motion.a
                   href="#projects"
                   variants={buttonVariants}
                   whileHover={!reduceMotion ? "hover" : undefined}
@@ -95,14 +95,14 @@ const Hero = () => {
                   className="bg-primary hover:bg-primary/80 rounded-sm px-8 py-4 text-base font-semibold text-white shadow-lg transition"
                 >
                   Explore My Work
-                </motion.a>
+                </motion.a> */}
 
                 <motion.a
                   href="#contact"
                   variants={buttonVariants}
                   whileHover={!reduceMotion ? "hover" : undefined}
                   whileTap={!reduceMotion ? "tap" : undefined}
-                  className="rounded-sm bg-black px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:bg-black/90 dark:bg-white/10 dark:hover:bg-white/5"
+                  className="block w-[70%] rounded-sm bg-black px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:bg-black/90 dark:bg-white/10 dark:hover:bg-white/5"
                 >
                   Let's Work Together
                 </motion.a>

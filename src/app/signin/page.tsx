@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 const SigninPage = () => {
   return (
     <>
-      <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
+      <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-45 lg:pb-28">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="shadow-three dark:bg-dark mx-auto max-w-[500px] rounded-sm bg-white px-6 py-10 sm:p-[60px]">
+              <div className="shadow-three dark:bg-dark mx-auto max-w-125 rounded-sm bg-white px-6 py-10 sm:p-15">
                 <h3 className="mb-3 text-center text-2xl font-bold text-black sm:text-3xl dark:text-white">
                   Sign in to your account
                 </h3>
@@ -74,11 +74,11 @@ const SigninPage = () => {
                   Sign in with Github
                 </button>
                 <div className="mb-8 flex items-center justify-center">
-                  <span className="bg-body-color/50 hidden h-[1px] w-full max-w-[70px] sm:block"></span>
+                  <span className="bg-body-color/50 hidden h-px w-full max-w-17.5 sm:block"></span>
                   <p className="text-body-color w-full px-5 text-center text-base font-medium">
                     Or, sign in with your email
                   </p>
-                  <span className="bg-body-color/50 hidden h-[1px] w-full max-w-[70px] sm:block"></span>
+                  <span className="bg-body-color/50 hidden h-px w-full max-w-17.5 sm:block"></span>
                 </div>
                 <form>
                   <div className="mb-8">

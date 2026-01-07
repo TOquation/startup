@@ -122,47 +122,46 @@ const TestimonialCarousel = () => {
             ))}
           </motion.div>
         </AnimatePresence>
-      </div>
 
-      {/* Navigation Buttons */}
-      <div className="mt-8 flex items-center justify-center gap-4">
+        {/* Left Navigation Button - Overlay with Blur */}
         <motion.button
           onClick={() => paginate(-1)}
-          whileHover={!reduceMotion ? { scale: 1.1 } : undefined}
-          whileTap={!reduceMotion ? { scale: 0.9 } : undefined}
-          className="bg-primary hover:bg-primary/90 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-white shadow-lg transition-all disabled:cursor-not-allowed disabled:opacity-50"
+          whileHover={!reduceMotion ? { scale: 1.05 } : undefined}
+          whileTap={!reduceMotion ? { scale: 0.95 } : undefined}
+          className="text-primary absolute top-1/2 left-0 z-10 flex h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 shadow-lg backdrop-blur-md transition-all hover:bg-white/90 dark:bg-gray-800/80 dark:text-white dark:hover:bg-gray-800/90"
           aria-label="Previous testimonials"
         >
-          <ChevronLeft />
+          <ChevronLeft className="h-6 w-6" />
         </motion.button>
 
-        {/* Pagination Dots */}
-        <div className="flex gap-2">
-          {Array.from({ length: totalPages }).map((_, index) => (
-            <motion.button
-              key={index}
-              onClick={() => setPage([index, index > page ? 1 : -1])}
-              variants={!reduceMotion ? dotVariants : undefined}
-              animate={page === index ? "active" : "inactive"}
-              transition={{ duration: 0.3 }}
-              className="h-2.5 w-2.5 rounded-full"
-              aria-label={`Go to slide ${index + 1}`}
-              style={{
-                backgroundColor: page === index ? "#4A6CF7" : "#D1D5DB",
-              }}
-            />
-          ))}
-        </div>
-
+        {/* Right Navigation Button - Overlay with Blur */}
         <motion.button
           onClick={() => paginate(1)}
-          whileHover={!reduceMotion ? { scale: 1.1 } : undefined}
-          whileTap={!reduceMotion ? { scale: 0.9 } : undefined}
-          className="bg-primary hover:bg-primary/90 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-white shadow-lg transition-all disabled:cursor-not-allowed disabled:opacity-50"
+          whileHover={!reduceMotion ? { scale: 1.05 } : undefined}
+          whileTap={!reduceMotion ? { scale: 0.95 } : undefined}
+          className="text-primary absolute top-1/2 right-0 z-10 flex h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 shadow-lg backdrop-blur-md transition-all hover:bg-white/90 dark:bg-gray-800/80 dark:text-white dark:hover:bg-gray-800/90"
           aria-label="Next testimonials"
         >
-          <ChevronRight />
+          <ChevronRight className="h-6 w-6" />
         </motion.button>
+      </div>
+
+      {/* Pagination Dots - Smaller size */}
+      <div className="mt-8 flex items-center justify-center gap-2">
+        {Array.from({ length: totalPages }).map((_, index) => (
+          <motion.button
+            key={index}
+            onClick={() => setPage([index, index > page ? 1 : -1])}
+            variants={!reduceMotion ? dotVariants : undefined}
+            animate={page === index ? "active" : "inactive"}
+            transition={{ duration: 0.3 }}
+            className="h-1.5 w-1.5 rounded-full"
+            aria-label={`Go to slide ${index + 1}`}
+            style={{
+              backgroundColor: page === index ? "#4A6CF7" : "#D1D5DB",
+            }}
+          />
+        ))}
       </div>
     </div>
   );

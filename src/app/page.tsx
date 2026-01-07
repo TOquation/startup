@@ -1,8 +1,10 @@
 import HomePage from "@/components/Home";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
+  title: "Oparaji Tochi | Frontend Engineer Portfolio",
+  description:
+    "Welcome to my portfolio. I build modern, responsive, and user-focused web applications with clean design and maintainable code.",
 };
 
 const Home = () => {

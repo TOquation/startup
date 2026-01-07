@@ -15,6 +15,8 @@ import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import Loader from "../Loader";
+import Projects from "../Projects";
+import Header from "@/components/Header"; // Import Header
 
 export default function HomePageClient() {
   const [loading, setLoading] = useState(true);
@@ -36,7 +38,7 @@ export default function HomePageClient() {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed inset-0 z-9999 flex items-center justify-center bg-linear-to-br from-black via-gray-900 to-black"
+            className="fixed inset-0 z-[999999] flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black"
           >
             {/* Glassmorphism overlay */}
             <div className="absolute inset-0 bg-black/80 backdrop-blur-3xl" />
@@ -53,6 +55,9 @@ export default function HomePageClient() {
         )}
       </AnimatePresence>
 
+      {/* Header - Only show when not loading */}
+      {!loading && <Header />}
+
       {/* Main Content */}
       {!loading && (
         <motion.div
@@ -67,6 +72,7 @@ export default function HomePageClient() {
           {/* <Brands /> */}
           <AboutSectionOne />
           <AboutSectionTwo />
+          {/* <Projects /> */}
           <Testimonials />
           {/* <Pricing /> */}
           {/* <Blog /> */}
