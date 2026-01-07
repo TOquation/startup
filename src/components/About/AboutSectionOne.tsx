@@ -11,7 +11,7 @@ const aboutData = {
   highlights: [
     "3+ Years Experience",
     "7+ Projects Delivered",
-    "Front End Enginneer",
+    "Front End Engineer",
     "Clean Code Advocate",
     "Fast Turnaround",
     "Client-Focused",
